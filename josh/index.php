@@ -13,7 +13,7 @@
  <body>
 <?php include("simon.php"); ?>
 
-<h1>Simon - click anywhere!!!!</h1>
+<h1>Simon - Alick Anywhere</h1>
 
 <button class="btn"> Start Game </button>
 
