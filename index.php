@@ -2,7 +2,7 @@
 <html>
   <head>
 
-      <title>ETHANS ANd Josiah's WEBSITE!</title>
+      <title>ETHANS ANd Josiah's WEBSITE!!</title>
 <link href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Nunito" rel="stylesheet">
 
 
