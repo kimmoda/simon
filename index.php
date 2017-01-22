@@ -2,7 +2,7 @@
 <html>
   <head>
 
-      <title>ETHANS ANd Josiah's WEBSITE!!</title>
+      <title>ETHANS ANd Josiah's WEBSITE</title>
 <link href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Nunito" rel="stylesheet">
 
 
@@ -53,7 +53,7 @@
     </style>
 
 
-      <h1>Josiah and Ethans AWESOME WEBSITE 2</h1>
+      <h1>Josiah and Ethans AWESOME WEBSITE 9</h1>
         <div class="boss">
             <h2>Our Crash course website</h2>
             <br/>
