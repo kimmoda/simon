@@ -53,7 +53,7 @@
     </style>
 
 
-      <h1>Josiah and Ethans AWESOME WEBSITE 12</h1>
+      <h1>Josiah and Ethans AWESOME WEBSITE</h1>
         <div class="boss">
             <h2>Our Crash course website</h2>
             <br/>
