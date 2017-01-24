@@ -70,7 +70,7 @@ function picknew() {
   echo "I just ran a php function";
 }
 
-echo "lols";
+echo "lols and more textables";
 
 if (isset($_POST['button'])) {
   picknew();
