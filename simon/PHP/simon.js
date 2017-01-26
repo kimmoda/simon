@@ -26,31 +26,41 @@ $(document).ready(function () {
 
 buildSeries = function(){
 
-		computerSeries.push(getRandomColour());
-		console.log(computerSeries);
-	};
+	computerSeries.push(getRandomColour());
+	console.log(computerSeries)
 
-
-
-showEachColour = function() {
-	computerSeries.forEach(function(entry) {
-		$("#" + computerSeries[entry] + "Box").fadeOut(500);
-		$("#" + computerSeries[entry] + "Box").fadeIn(500);
-		$("#" + computerSeries[entry] + "Box").fadeOut(500);
-		console.log(entry);
-	});
 };
+
+doIt = function(computerSeries) {
+
+	var i = 0;
+
+	showEachColour = function(computerSeries) {
+			$("#" + computerSeries[i] + "Box").fadeOut(500);
+			$("#" + computerSeries[i] + "Box").fadeIn(500);
+			$("#" + computerSeries[i] + "Box").fadeOut(500);
+			console.log(computerSeries[i]);
+		};
+
+    if( i < computerSeries.length ){
+			console.log(computerSeries.length);
+        setTimeout( showEachColour(computerSeries), 500 );
+				i++;
+    }
+
+
+}
 
 
 $( ".btn" ).click(function() {
 
-	buildSeries();
-
-	for (var i = 0; i < 10; i++) {
-			setTimeout(showEachColour, 500 * i);
-	};
-
+buildSeries();
+doIt(computerSeries);
 
 });
+
+
+
+
 
 });
