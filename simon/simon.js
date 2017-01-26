@@ -25,42 +25,23 @@ $(document).ready(function () {
 	};
 
 buildSeries = function(){
-
 	computerSeries.push(getRandomColour());
-	console.log(computerSeries)
 
 };
 
-doIt = function(computerSeries) {
-
-	var i = 0;
-
-	showEachColour = function(computerSeries) {
-			$("#" + computerSeries[i] + "Box").fadeOut(500);
-			$("#" + computerSeries[i] + "Box").fadeIn(500);
-			$("#" + computerSeries[i] + "Box").fadeOut(500);
-			console.log(computerSeries[i]);
-		};
-
-    if( i < computerSeries.length ){
-			console.log(computerSeries.length);
-        setTimeout( showEachColour(computerSeries), 500 );
-				i++;
-    }
-
-
+// would be part of a for each loop with a pause between each iteration
+flashColour = function() {
+	$("#" + computerSeries[0] + "Box").fadeOut(500);
+	$("#" + computerSeries[0] + "Box").fadeIn(500);
+	$("#" + computerSeries[0] + "Box").fadeOut(500);
 }
-
 
 $( ".btn" ).click(function() {
 
 buildSeries();
-doIt(computerSeries);
+flashColour();
 
 });
-
-
-
 
 
 });
