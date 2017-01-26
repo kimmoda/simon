@@ -2,7 +2,6 @@ $(document).ready(function () {
 
 	var colours = ["red", "blue", "green", "yellow"];
 	var level = 0;
-	var numberOfLevels = 4;
 	var computerSeries = [];
 
 	getRandomColour = function(){
@@ -25,43 +24,33 @@ $(document).ready(function () {
 
 	};
 
-createSeries = function(){
-
-for (i=0; i<numberOfLevels; i++){
+buildSeries = function(){
 
 		computerSeries.push(getRandomColour());
-
+		console.log(computerSeries);
 	};
-}
-
-createSeries();
-
-displayColours = function(){
-
-	for (i=0; i<10; i++){
 
 
 
-			setTimeout(function(){
-				console.log("Current colour is " + entry);
-				$("#" + entry + "Box").fadeOut(500);
-				$("#" + entry + "Box").fadeIn(500);
-				$("#" + entry + "Box").fadeOut(500)
-
-			},3000);
-}
-
-
-		});
+showEachColour = function() {
+	computerSeries.forEach(function(entry) {
+		$("#" + computerSeries[entry] + "Box").fadeOut(500);
+		$("#" + computerSeries[entry] + "Box").fadeIn(500);
+		$("#" + computerSeries[entry] + "Box").fadeOut(500);
+		console.log(entry);
+	});
 };
 
 
 $( ".btn" ).click(function() {
 
-	displayColours();
+	buildSeries();
+
+	for (var i = 0; i < 10; i++) {
+			setTimeout(showEachColour, 500 * i);
+	};
+
 
 });
-
-
 
 });
