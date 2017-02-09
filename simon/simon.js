@@ -5,23 +5,8 @@ $(document).ready(function () {
 	var computerSeries = [];
 
 	getRandomColour = function(){
-
 		var randomnumber = Math.floor(Math.random() * 4);
-
-		if (randomnumber == 0) {
-			return colours[0];
-
-		}else if (randomnumber == 1){
-			return colours[1];
-
-		}else if (randomnumber == 2){
-			return colours[2];
-
-		}else {
-			return colours[3];
-
-		}
-
+		return colours[randomnumber];
 	};
 
 buildSeries = function(){
@@ -30,7 +15,9 @@ buildSeries = function(){
 
 // would be part of a for each loop with a pause between each iteration
 flashColour = function(colour, index) {
-	$("#" + colour + "Box").delay(index * 2500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+	setTimeout(function() {
+			$("#" + colour + "Box").fadeOut(500).fadeIn(500);
+	}, index * 1500);
 }
 
 flashColours = function() {
@@ -39,14 +26,12 @@ flashColours = function() {
 	}
 }
 
+buildSeries();
+buildSeries();
+buildSeries();
+
 $( ".btn" ).click(function() {
-
-	buildSeries();
-	buildSeries();
-	buildSeries();
 	flashColours();
-
 });
-
 
 });
