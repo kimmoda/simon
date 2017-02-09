@@ -32,11 +32,9 @@ $(document).ready(function () {
     displaySeries();
   });
 
-
   sleep = function(waitinSeconds){
     setTimeout(function () {
     },waitinSeconds * 300);
   }
-
 
 });
