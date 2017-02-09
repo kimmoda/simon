@@ -2,7 +2,6 @@ $(document).ready(function () {
 
 	var colours = ["red", "blue", "green", "yellow"];
 	var level = 0;
-	var numberOfLevels = 4;
 	var computerSeries = [];
 
 	getRandomColour = function(){
@@ -25,43 +24,29 @@ $(document).ready(function () {
 
 	};
 
-createSeries = function(){
-
-for (i=0; i<numberOfLevels; i++){
-
-		computerSeries.push(getRandomColour());
-
-	};
-}
-
-createSeries();
-
-displayColours = function(){
-
-	for (i=0; i<10; i++){
-
-
-
-			setTimeout(function(){
-				console.log("Current colour is " + entry);
-				$("#" + entry + "Box").fadeOut(500);
-				$("#" + entry + "Box").fadeIn(500);
-				$("#" + entry + "Box").fadeOut(500)
-
-			},3000);
-}
-
-
-		});
+buildSeries = function(){
+	computerSeries.push(getRandomColour());
 };
 
+// would be part of a for each loop with a pause between each iteration
+flashColour = function(colour, index) {
+	$("#" + colour + "Box").delay(index * 2500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+}
+
+flashColours = function() {
+	for(var i=0; i < computerSeries.length; i++) {
+		flashColour(computerSeries[i], i);
+	}
+}
 
 $( ".btn" ).click(function() {
 
-	displayColours();
+	buildSeries();
+	buildSeries();
+	buildSeries();
+	flashColours();
 
 });
-
 
 
 });
