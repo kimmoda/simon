@@ -29,6 +29,8 @@ flashColours = function() {
 buildSeries();
 buildSeries();
 buildSeries();
+buildSeries();
+buildSeries();
 
 $( ".btn" ).click(function() {
 	flashColours();
