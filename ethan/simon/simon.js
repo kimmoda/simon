@@ -27,8 +27,13 @@ $(document).ready(function () {
         setInterval(function () {
           $("#" + entry + "button").fadeOut(500);
           $("#" + entry + "button").fadeIn(500);
+          stopTheInterval();
         }, 3000);
       })
+    }
+
+    stopTheInterval = function() {
+      clearInterval();
     }
 
 });
